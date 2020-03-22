@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/802d737aeb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-blue">
+
+
+   
+
+  {% include 'includes/navbar.html' %}
+
+{%block body%}
+
+{%endblock body%}
+
+
+  {% include 'includes/footer.html' %}
+
+   
+  <style>
+    html,
+    body {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    body {
+        max-width: 80vw;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        background: black;
+        margin: 50px auto;
+        min-height: calc(100vh - 200px);
+        color: white;
+    }
+
+    .bg-pink {
+        background: #e7b2a5;
+    }
+
+    .bg-orange {
+        background: #f1935c;
+    }
+
+    .bg-red {
+        background: #ba6b57;
+    }
+
+    .bg-blue {
+        background: #30475e;
+    }
+
+    .text-pink {
+        color: #e7b2a5;
+    }
+
+    .text-orange {
+        color: #f1935c;
+    }
+
+    .text-red {
+        color: #ba6b57;
+    }
+
+    .text-blue {
+        color: #30475e;
+    }
+
+    .m-5-a {
+        margin: 80px auto;
+    }
+
+    .m-4-a {
+        margin: 40px auto;
+    }
+
+    .m-3-a {
+        margin: 20px auto;
+    }
+
+    .m-2-a {
+        margin: 10px auto;
+    }
+
+    .m-1-a {
+        margin: 5px auto;
+    }
+
+    .mt-5 {
+        margin-top: 50px;
+    }
+
+    .mt-4 {
+        margin-top: 40px;
+    }
+
+    .mt-3 {
+        margin-top: 20px;
+    }
+
+    .mt-2 {
+        margin-top: 10px;
+    }
+
+    .mt-1 {
+        margin-top: 5px;
+    }
+
+    .ml-5 {
+        margin-left: 50px;
+    }
+
+    .ml-4 {
+        margin-left: 40px;
+    }
+
+    .ml-3 {
+        margin-left: 20px;
+    }
+
+    .ml-2 {
+        margin-left: 10px;
+    }
+
+    .ml-1 {
+        margin-left: 5px;
+    }
+
+    .mb-5 {
+        margin-bottom: 50px;
+    }
+
+    .mb-4 {
+        margin-bottom: 40px;
+    }
+
+    .mb-3 {
+        margin-bottom: 20px;
+    }
+
+    .mb-2 {
+        margin-bottom: 10px;
+    }
+
+    .mb-1 {
+        margin-bottom: 5px;
+    }
+
+    .mr-5 {
+        margin-right: 50px;
+    }
+
+    .mr-4 {
+        margin-right: 40px;
+    }
+
+    .mr-3 {
+        margin-right: 20px;
+    }
+
+    .mr-2 {
+        margin-right: 10px;
+    }
+
+    .mr-1 {
+        margin-right: 5px;
+    }
+
+    .pt-1 {
+        padding-top: 5px;
+    }
+
+    .pt-2 {
+        padding-top: 10px;
+    }
+
+    .pt-3 {
+        padding-top: 20px;
+    }
+
+    .pt-4 {
+        padding-top: 40px;
+    }
+
+    .pt-5 {
+        padding-top: 50px;
+    }
+
+    .pb-1 {
+        padding-bottom: 5px;
+    }
+
+    .pb-2 {
+        padding-bottom: 10px;
+    }
+
+    .pb-3 {
+        padding-bottom: 20px;
+    }
+
+    .pb-4 {
+        padding-bottom: 40px;
+    }
+
+    .pb-5 {
+        padding-bottom: 50px;
+    }
+
+    .pl-1 {
+        padding-left: 5px;
+    }
+
+    .pl-2 {
+        padding-left: 10px;
+    }
+
+    .pl-3 {
+        padding-left: 20px;
+    }
+
+    .pl-4 {
+        padding-left: 40px;
+    }
+
+    .pl-5 {
+        padding-left: 50px;
+    }
+
+    .pr-1 {
+        padding-right: 5px;
+    }
+
+    .pr-2 {
+        padding-right: 10px;
+    }
+
+    .pr-3 {
+        padding-right: 20px;
+    }
+
+    .pr-4 {
+        padding-right: 40px;
+    }
+
+    .pr-5 {
+        padding-right: 50px;
+    }
+
+    .rounded {
+        border-radius: 10px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .justify {
+        justify-content: space-between;
+    }
+
+    .product {
+        max-width: 250px;
+        max-height: 380px;
+        margin: 10px;
+        color: white;
+    }
+
+
+
+    .rounded-2 {
+        border-radius: 20px;
+    }
+
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .link:hover,
+    .link:focus {
+        color: #30475e;
+        transition: color 0.1s ease-in;
+    }
+
+    .link {
+        color: #f6f6f6;
+        padding: 5px;
+    }
+
+    .btn {
+        border-radius: 5px;
+        color: #f6f6f6;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .btn-orange {
+        background: #f1935c;
+        color: #30475e;
+    }
+
+    .btn-blue {
+        background: #30475e;
+        color: #f1935c;
+    }
+
+    .btn:focus,
+    .btn:hover {
+        color: #f1935c;
+        background: #f6f6f6;
+        transition: background-color 0.2s ease-in;
+    }
+
+    .product-header,
+    .product-body,
+    .product-footer {
+        justify-content: space-between;
+        padding-top: 5px;
+        margin: 15px auto;
+    }
+
+    .header,
+    .footer {
+        max-width: 80vw;
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .footer-wrapper {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .product-group {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding-top: 0;
+        margin: 0;
+        list-style: none;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

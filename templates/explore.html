@@ -1,0 +1,29 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+<div class="wrapper bg-red rounded flex">
+
+    
+    <div class="product-group flex">
+        {% if products %}
+        {% for product in products %}
+        <div class="product bg-orange rounded-2 ">
+            <div>
+                <img class="img rounded-2" src="{{product.image.url}}" alt="img">
+            </div>
+            <div class="product-body flex justify">
+                <a class="link m-2" href="/product/{{product.name}}/detail/{{product.id}}">{{product.name}} -
+                    &#36;{{product.price}}
+                </a>
+                <a class="btn m-2" href="/product/{{product.name}}/{{product.id}}"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="product-footer flex justify">
+                <small class="product-author ml-3">{{product.company_name}}</small>
+                <small class="product-count mr-3">{{product.count}}</small>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{%endblock body%}

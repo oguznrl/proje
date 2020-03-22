@@ -1,0 +1,42 @@
+{% extends 'layout.html'%}
+
+{%block body%}
+
+    <div class="wrapper bg-blue flex rounded justify">
+      <div>
+        <ul class="list-group">
+            <li class="list-group-item text-dark">
+                <h2>{{product.name}} - &#36;{{product.price}}</h2>
+            </li>
+            <li class="list-group-item list-group-item-secondary flex justify">
+                <a href="" class="btn btn-success"> Buy </a>
+                <a href="" class="btn btn-orange"> Report </a>
+            </li>
+        </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item text-dark">
+                <h2>{{product.name}} - &#36;{{product.price}}</h2>
+            </li>
+            <li class="list-group-item list-group-item-secondary flex justify">
+                <a href="" class="btn btn-success"> Buy </a>
+                <a href="" class="btn btn-orange"> Report </a>
+            </li>
+        </ul>
+    </div>
+    
+        <div class="card bg-red " style="max-width: 55vw; width:100%;">
+            <img src="{{product.image.url}}" class="card-img-top">
+            <div class="card-body mt-5">
+                <h2 class="card-title text-dark">Card title</h5>
+                <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <a href="#" class="btn btn-dark">Buy</a>
+            </div>
+        </div>
+    
+    
+    
+    </div>
+
+
+{%endblock body%}

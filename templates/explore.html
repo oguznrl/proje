@@ -1,29 +1,94 @@
-{%extends 'layout.html'%}
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    {% if messages %}
 
-{%block body%}
-<div class="wrapper bg-red rounded flex">
+    {% for message in messages %}
+    {% if message.tags == "info" %}
+    <div class="alert alert-danger">{{ message }}</div>
+    {% else %}
+    <div class="alert alert-{{ message.tags }}">{{ message }} <a href="{% url 'your_cart'%}"
+            class="alert-link">Buradan</a> sepetine
+        gidebilirsin.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 
-    
-    <div class="product-group flex">
-        {% if products %}
+    {% endif %}
+    {% endfor %}
+
+    {% endif %}
+</div>
+<div class="container my-4">
+    {% for category in all_categories %}
+    <h1> {{category|upper}} </h1>
+    <div class="row bg-secondary my-2 card-deck">
         {% for product in products %}
-        <div class="product bg-orange rounded-2 ">
-            <div>
-                <img class="img rounded-2" src="{{product.image.url}}" alt="img">
-            </div>
-            <div class="product-body flex justify">
-                <a class="link m-2" href="/product/{{product.name}}/detail/{{product.id}}">{{product.name}} -
-                    &#36;{{product.price}}
-                </a>
-                <a class="btn m-2" href="/product/{{product.name}}/{{product.id}}"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-            <div class="product-footer flex justify">
-                <small class="product-author ml-3">{{product.company_name}}</small>
-                <small class="product-count mr-3">{{product.count}}</small>
+        {% if category in product.categories_as_list %}
+        <div class="col">
+            <div class="card ml-2 bg-secondary">
+                <div class="card-header d-flex justify">
+                    <a href="../product/{{product.name}}/{{product.id}}" class="lead productname">{{product.name}}
+                        <small class="badge badge-success"
+                            style="font-size: 0.75rem;">{{product.company_name}}</small></a>
+
+                    <span class="lead text-dark"> &#36;{{product.price}}</span>
+                </div>
+                <div class="card-body">
+                    {% for p_category in product.categories_as_list %}
+                    <small class="badge badge-warning mb-2">{{p_category}}</small>
+                    {% endfor %}
+                    <p class="card-text text-warning">Some quick example text to build on the card title and make up the
+                        bulk of
+                        the
+                        card's content.</p>
+                </div>
+
+                <div class="card-footer d-flex justify">
+
+                    {% if product.count > 0 %}
+                    <a href="../product/{{product.id}}/add-cart" class="btn btn-blue">Add
+                        Cart</a>
+                    {% else %}
+                    <small class="badge badge-danger"> out of stock </small>
+                    {% endif %}
+
+                    <small class="text-warning"> {{product.count}} </small>
+                </div>
             </div>
         </div>
-        {% endfor %}
+
         {% endif %}
+
+        {% endfor %}
     </div>
+    {% endfor %}
+
 </div>
-{%endblock body%}
+<style>
+    .productname {
+        color: #f6f6f6;
+        font-size: 1.5rem;
+    }
+
+    .productname:hover,
+    .productname:focus {
+        color: #fbe3b9;
+        text-decoration: none;
+        transition: color 0.2s ease-in;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .card-deck {
+            display: block !important;
+        }
+
+        .card-header {
+            display: grid !important;
+        }
+    }
+</style>
+
+{% endblock body %}

@@ -1,11 +1,68 @@
-<header  class="header flex justify bg-orange">
-    <span> SHOP <span class="text-red">APP</span> </span>
-    <div class="mt-1">
-      <a class="btn btn-orange" href=""><i class="fas fa-shopping-cart"></i>YOUR CART</a>
-      <a class="btn btn-blue" href=""><i class="fas fa-globe"></i>EXPLORE</a>
-    </div>
-    <div class="mt-1">
-      <a class="btn btn-orange" href=""> <i class="fas fa-sign-in-alt"></i>SING IN</a>
-      <a class="btn btn-blue" href="" ><i class="fas fa-plus"></i>LOGIN</a>
-    </div>
+<header class="header flex justify">
+
+  <span class="lead text-success m-2">
+      <svg class="bi bi-gift" width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+              d="M2 6v8.5a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V6h1v8.5a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 011 14.5V6h1zm8-5a1.5 1.5 0 00-1.5 1.5c0 .098.033.16.12.227.103.081.272.15.49.2A3.44 3.44 0 009.96 3h.015L10 2.999l.025.002h.014A2.569 2.569 0 0010.293 3c.17-.006.387-.026.598-.073.217-.048.386-.118.49-.199.086-.066.119-.13.119-.227A1.5 1.5 0 0010 1zm0 3h-.006a3.535 3.535 0 01-.326 0 4.435 4.435 0 01-.777-.097c-.283-.063-.614-.175-.885-.385A1.255 1.255 0 017.5 2.5a2.5 2.5 0 015 0c0 .454-.217.793-.506 1.017-.27.21-.602.322-.885.385a4.434 4.434 0 01-1.104.099H10z"
+              clip-rule="evenodd" />
+          <path fill-rule="evenodd"
+              d="M6 1a1.5 1.5 0 00-1.5 1.5c0 .098.033.16.12.227.103.081.272.15.49.2A3.44 3.44 0 005.96 3h.015L6 2.999l.025.002h.014l.053.001a3.869 3.869 0 00.799-.076c.217-.048.386-.118.49-.199.086-.066.119-.13.119-.227A1.5 1.5 0 006 1zm0 3h-.006a3.535 3.535 0 01-.326 0 4.435 4.435 0 01-.777-.097c-.283-.063-.614-.175-.885-.385A1.255 1.255 0 013.5 2.5a2.5 2.5 0 015 0c0 .454-.217.793-.506 1.017-.27.21-.602.322-.885.385a4.435 4.435 0 01-1.103.099H6zm1.5 12V6h1v10h-1z"
+              clip-rule="evenodd" />
+          <path fill-rule="evenodd"
+              d="M15 4H1v1h14V4zM1 3a1 1 0 00-1 1v1a1 1 0 001 1h14a1 1 0 001-1V4a1 1 0 00-1-1H1z"
+              clip-rule="evenodd" />
+      </svg> CADEAU. </span>
+
+  <div class="flex m-2 justify-content-between">
+      <a class="link mr-2 mt-2 " href="/"><i class="fas fa-home mr-1"></i>Home</a>
+      <a class="link ml-2 mt-2" href="/explore"><i class="fas fa-globe mr-1"></i>Explore</a>
+
+      <div class="col-5">
+          <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm" placeholder="Search something...">
+      </div>
+  </div>
+
+
+  <div class="m-2">
+      <a class="link" href="/your-cart"><small class="badge badge-secondary mr-1">{{cart_item}}</small><i
+              class="fas fa-shopping-cart mr-1"></i>Your Cart</a>
+      {% if user.is_authenticated %}
+      <a href="/users/profile/{{user.username}}" class=" badge badge-warning ml-2">
+          <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd" />
+          </svg> {{user.username}}</a>
+
+      <a href="{% url 'user:logout' %}" class="link">
+          <svg class="bi bi-box-arrow-in-right mr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                  d="M8.146 11.354a.5.5 0 010-.708L10.793 8 8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708 0z"
+                  clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9A.5.5 0 011 8z" clip-rule="evenodd" />
+              <path fill-rule="evenodd"
+                  d="M13.5 14.5A1.5 1.5 0 0015 13V3a1.5 1.5 0 00-1.5-1.5h-8A1.5 1.5 0 004 3v1.5a.5.5 0 001 0V3a.5.5 0 01.5-.5h8a.5.5 0 01.5.5v10a.5.5 0 01-.5.5h-8A.5.5 0 015 13v-1.5a.5.5 0 00-1 0V13a1.5 1.5 0 001.5 1.5h8z"
+                  clip-rule="evenodd" />
+          </svg>logout
+      </a>
+      {% else %}
+
+      <a class="link ml-1" href="{% url 'user:signup' %}"><i class="fas fa-sign-in-alt mr-1"></i>sign in</a>
+      <a class="link ml-1" href="{% url 'user:login' %}"><i class="fas fa-plus mr-1"></i>login</a>
+      {% endif %}
+
+
+  </div>
+
+  <style>
+      @media screen and (max-width: 1080px) {
+          .header {
+              flex-direction: column;
+              align-items: center;
+              width: 100vw;
+          }
+      }
+  </style>
 </header>

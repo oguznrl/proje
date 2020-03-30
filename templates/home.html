@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+{% block body %}
+<main role="main">
+
+    <div class="container">
+
+        <hr class="my-divider">
+
+        <div class="row ">
+            <div class="col-md-7">
+                <h2 class="my-heading"> Your <span class="text-muted">safety</span>, our <span
+                        class="text-muted">priority</span>.
+                </h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                    euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
+                    tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5 order-md-1 bg-light rounded flex justify-content-around">
+                <div class="" style="align-items:center; display:block; margin-top:40px;">
+                    <h1 style="font-size: 3rem;"> 10+ </h1>
+                    <span style="font-size:1.2rem;"> years </span>
+                </div>
+                <div class="" style="align-items:center; display:block; margin-top:40px;">
+                    <h1 style="font-size: 3rem;"> 4000+ </h1>
+                    <span style="font-size:1.2rem;"> employees </span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-divider">
+        <div class="row ">
+            <div class="col-md-7">
+                <h2 class="my-heading"> Qualified <span class="text-warning">product</span>, maximum <span
+                        class="text-warning">pleasure</span>.
+                </h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                    euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
+                    tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5 order-md-1 bg-light rounded flex justify-content-around">
+                <div class="" style="align-items:center; display:block; margin-top:40px;">
+                    <h1 style="font-size: 2.5rem;"> 212,230 </h1>
+                    <span style="font-size:1.2rem;"> customers </span>
+                </div>
+                <div class="" style="align-items:center; display:block; margin-top:40px;">
+                    <h1 style="font-size: 2.5rem;"> 1,468,134 </h1>
+                    <span style="font-size:1.2rem;"> product sold </span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-divider">
+
+        <div class="row ">
+            <div class="col-md-7">
+                <h2 class="my-heading">We care about <span class="text-muted">partnership.</span>
+                </h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+                    euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
+                    tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5 order-md-1 bg-light rounded flex justify-content-around">
+                <div class="" style="align-items:center; display:block; margin-top:40px;">
+                    <h1 style="font-size: 3rem;"> 20+ </h1>
+                    <span style="font-size:1.2rem;"> association </span>
+                </div>
+                <div class="" style="align-items:center; display:block; margin-top:40px;">
+                    <h1 style="font-size: 3rem;"> 0 </h1>
+                    <span style="font-size:1.2rem;"> complaint </span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-divider">
+
+        <div class="contact-us col-6 mx-auto">
+            <h1>Contact Us</h1>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputname">Name</label>
+                        <input type="text" class="form-control" id="inputname">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Your Message</label>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary">Send</button>
+            </form>
+        </div>
+
+    </div>
+
+</main>
+
+
+<style>
+    .marketing h2 {
+        font-weight: 400;
+    }
+
+
+    .my-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -.05rem;
+    }
+</style>
+{% endblock body %}

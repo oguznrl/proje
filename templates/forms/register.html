@@ -1,0 +1,18 @@
+{% extends 'forms/forms_layout.html' %}
+{% load crispy_forms_tags %}
+{% block form %}
+<h1 class="m-2 text-secondary">REGISTER</h1>
+<form method="post" class="m-2" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <br>
+    <button type="submit" class="btn btn-outline-dark" style="  border-radius:10px;">JOIN US!</button>
+</form>
+<div class="border-top pt-3 mb-3">
+    <small class="text-muted">
+        Already Have An Account? <a href="{% url 'user:login' %}" class="text-warning ml-2"
+            style="text-decoration: none;"> LOGIN </a>
+    </small>
+</div>
+
+{% endblock %}
